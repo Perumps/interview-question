@@ -51,3 +51,16 @@ http://localhost:50000/long?tiny=c10dd26f
 ## Remove stale URL entries from DB - Scheduled Task
 
 This scheduled task runs every second and deletes any H2 records that are older than 30 minutes. The retention time is configurable via scheduled.task.delete-time in the application.yml file.
+
+## Build and Deployment
+
+The pom.xml file includes a profile named 'docker-image'. This profile can be used to build and push a docker container image named 'url-hasher' to the local Docker daemon. If needed, the profile can be modified to push the image to an online container registry like Docker Hub, GCP Container Registry etc.
+
+Below command generates the image as configured in the profile.
+
+mvn clean install -Pdocker-image
+
+Once the image is available in the registry, it can be run and exposed on port 50000 using below command.
+
+docker run -it -p 50000:50000 url-hasher
+

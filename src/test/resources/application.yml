@@ -1,0 +1,3 @@
+scheduled:
+  task:
+    delete-time: 1800000

@@ -6,8 +6,7 @@ backbase:
 
 spring:
   datasource:
-    url: jdbc:h2:mem:testdb
-#    url: jdbc:h2:file:./demo
+    url: jdbc:h2:mem:urldb
     driverClassName: org.h2.Driver
     username: sa
     password: password
@@ -21,3 +20,6 @@ spring:
     console:
       enabled: false
 
+scheduled:
+  task:
+    delete-time: 1800000

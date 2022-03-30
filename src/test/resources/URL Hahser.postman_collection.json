@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "1414fac9-e004-4a0d-964b-42d6180b936a",
+		"name": "URL Hahser",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Hash Url",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50000/short?url=https://stash.backbase.com/projects/PO/repos/payment-order-integration-spec/browse/src/main/resources/schemas/definitions.json",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50000",
+					"path": [
+						"short"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https://stash.backbase.com/projects/PO/repos/payment-order-integration-spec/browse/src/main/resources/schemas/definitions.json"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hash Url - Missing Url",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50000/short?url=",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50000",
+					"path": [
+						"short"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hash Url - Invalid Url",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50000/short?url=https:badurl.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50000",
+					"path": [
+						"short"
+					],
+					"query": [
+						{
+							"key": "url",
+							"value": "https:badurl.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Hash Url - Missing Query Parameter",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50000/short?ur=https:badurl.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50000",
+					"path": [
+						"short"
+					],
+					"query": [
+						{
+							"key": "ur",
+							"value": "https:badurl.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Url",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50000/long?tiny=c10dd26f",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50000",
+					"path": [
+						"long"
+					],
+					"query": [
+						{
+							"key": "tiny",
+							"value": "c10dd26f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Url - Not found",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:50000/long?tiny=c10dd26ff",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "50000",
+					"path": [
+						"long"
+					],
+					"query": [
+						{
+							"key": "tiny",
+							"value": "c10dd26ff"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

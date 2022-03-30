@@ -24,6 +24,8 @@ For example:
 
 http://localhost:50000/short?url=https://stash.backbase.com/projects/PO/repos/payment-order-integration-spec/browse/src/main/resources/schemas/definitions.json
 
+Sample requests are available in test/resources/URL Hahser.postman_collection.json.
+
 ### Response
 
 * Successful response - Returns the short hash value with an HTTP response code of 201
@@ -41,6 +43,8 @@ Pass the hashed value as a query parameter to the /long endpoint. The parameter 
 For example:
 
 http://localhost:50000/long?tiny=c10dd26f
+
+Sample requests are available in test/resources/URL Hahser.postman_collection.json.
 
 ### Response
 

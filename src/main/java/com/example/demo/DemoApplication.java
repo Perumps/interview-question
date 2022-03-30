@@ -5,6 +5,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
+/**
+ *
+ * Demo Application for URL Hasher
+ *
+ */
 @SpringBootApplication
 @EnableConfigurationProperties
 @EntityScan(basePackages = {"com.example.demo.repository"})  // scan JPA entities
